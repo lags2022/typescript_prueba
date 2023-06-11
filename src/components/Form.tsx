@@ -38,8 +38,11 @@ const Form = ({ onNewSub }: FormProps) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="w-[300px] m-auto ">
+      <form
+        onSubmit={handleSubmit}
+        className="flex items-center justify-center  [&>button]:border-2 [&>button]:border-blue-500 [&>button]:rounded-md [&>button]:bg-blue-200 [&>button:hover]:bg-blue-800 [&>button:hover]:text-white [&>button]:my-1 [&>button]:w-fit [&>button]:px-2 [&>input]:w-full"
+      >
         <input
           value={inputValues.nick}
           type="text"
@@ -62,15 +65,16 @@ const Form = ({ onNewSub }: FormProps) => {
           onChange={handleChange}
         />
         <textarea
+          className="border-2 border-gray-300 rounded-sm w-full"
           value={inputValues.description}
           name="description"
           placeholder="description"
           onChange={handleChange}
         />
+        <button type="submit">Save new Sub!</button>
         <button type="button" onClick={handleClear}>
           Clear the form
         </button>
-        <button type="submit">Save new Sub!</button>
       </form>
     </div>
   );

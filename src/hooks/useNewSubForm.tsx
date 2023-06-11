@@ -8,7 +8,7 @@ interface FormState {
 const INITIAL_STATE = {
   nick: "",
   subMonths: 0,
-  avatar: "",
+  avatar: "https://i.pravatar.cc/150?img=1",
   description: "",
 };
 
@@ -40,8 +40,8 @@ const formReducer = (
   }
 };
 
-const useNewSubForm=()=>{
-    return useReducer(formReducer,INITIAL_STATE)
-}
+const useNewSubForm = () => {
+  return useReducer(formReducer, INITIAL_STATE);
+};
 
 export default useNewSubForm;
