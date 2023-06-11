@@ -62,7 +62,7 @@ const List = ({ subs, onClose, handleOrder }: Props) => {
       values={subs}
       onReorder={(order) => handleOrder(order)}
       layout
-      className="flex gap-4 flex-wrap m-4 border-2 rounded-lg p-2 border-black bg-slate-100 justify-center"
+      className="flex flex-col gap-4 m-4 border-2 rounded-lg p-2 border-black bg-slate-100 justify-center"
     >
       {renderList()}
     </Reorder.Group>

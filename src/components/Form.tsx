@@ -1,5 +1,6 @@
 import useNewSubForm from "../hooks/useNewSubForm";
 import { Sub } from "../types";
+import { motion } from "framer-motion";
 
 interface FormProps {
   onNewSub: (newSub: Sub) => void;
@@ -38,7 +39,21 @@ const Form = ({ onNewSub }: FormProps) => {
   };
 
   return (
-    <div className="w-[300px] m-auto ">
+    <div className="w-[300px] m-auto my-10 ">
+      <motion.h1
+        initial={{ scale: 0 }}
+        animate={{
+          scale: 1,
+        }}
+        transition={{
+          duration: 2,
+          delay: 0.2,
+          type: "spring",
+        }}
+        className="text-center my-4 text-2xl font-bold"
+      >
+        Add Sub
+      </motion.h1>
       <form
         onSubmit={handleSubmit}
         className="flex items-center justify-center  [&>button]:border-2 [&>button]:border-blue-500 [&>button]:rounded-md [&>button]:bg-blue-200 [&>button:hover]:bg-blue-800 [&>button:hover]:text-white [&>button]:my-1 [&>button]:w-fit [&>button]:px-2 [&>input]:w-full"
