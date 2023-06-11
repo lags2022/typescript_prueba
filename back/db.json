@@ -1,0 +1,21 @@
+{
+    "suscribers": [
+        {
+            "nick": "person1",
+            "months": 3,
+            "profileUrl": "https://i.pravatar.cc/150?img=32",
+            "description": "interesting"
+        },
+        {
+            "nick": "person2",
+            "months": 7,
+            "profileUrl": "https://i.pravatar.cc/150?img=12"
+        },
+        {
+            "nick": "person3",
+            "months": 20,
+            "profileUrl": "https://i.pravatar.cc/150?img=14",
+            "description": "investing"
+        }
+    ]
+}
